@@ -1,0 +1,25 @@
+.Home {
+  margin-top: 5rem;
+}
+.card {
+  border-radius: 19px !important;
+  background: linear-gradient(315deg, #0d0d0d, #0b0b0b) !important;
+  box-shadow: -10px -10px 20px #050505, 10px 10px 20px #131313 !important;
+  padding: 10px 0;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff;
+}
+.cardBody {
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+}
+.cardImage {
+  padding: 3rem;
+}
+.btn {
+  border-radius: 54px;
+  background: linear-gradient(315deg, #cfcfcf, #aeaeae);
+  box-shadow: -5px -5px 3px #b2b2b2, 5px 5px 3px #d0d0d0;
+}

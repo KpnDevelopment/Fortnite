@@ -1,0 +1,33 @@
+.Carousel {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50px;
+  background: linear-gradient(to right, #000000 0%, #737373 100%) !important;
+  box-shadow: 5px 5px 0px #101010, -5px -5px 0px #181818 !important;
+}
+
+.wave {
+  width: 99wv !important;
+  position: absolute;
+  margin-top: 31rem;
+}
+.bannerCard {
+  margin-top: 4rem;
+  width: 50rem;
+  height: 45rem;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: #141414 !important;
+  box-shadow: 5px 5px 0px #101010, -5px -5px 0px #181818 !important;
+  z-index: 1;
+}
+.bannerCard .title {
+  font-size: 5rem !important;
+  color: aliceblue;
+}

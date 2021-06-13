@@ -8,27 +8,25 @@ function Navigationbar() {
   };
 
   return (
-    <div>
-      <Navbar bg="primary" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Link to="/">
-            <li style={liStyle}>Home</li>
-          </Link>
-          <Link to="/shop">
-            <li style={liStyle}>shop</li>
-          </Link>
+    <Navbar fixed="top" style={{ zIndex: "1" }} bg="dark" variant="dark">
+      <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+      <Nav className="mr-auto">
+        <Link to="/">
+          <li style={liStyle}>Home</li>
+        </Link>
+        <Link to="/shop">
+          <li style={liStyle}>shop</li>
+        </Link>
 
-          <Link to="/about">
-            <li style={liStyle}>about</li>
-          </Link>
-        </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-light">Search</Button>
-        </Form>
-      </Navbar>
-    </div>
+        <Link to="/about">
+          <li style={liStyle}>about</li>
+        </Link>
+      </Nav>
+      <Form inline>
+        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        <Button variant="outline-light">Search</Button>
+      </Form>
+    </Navbar>
   );
 }
 

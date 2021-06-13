@@ -1,12 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Button, Navbar } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigationbar from "./componets/navigation/Navigationbar";
 import Home from "./componets/home/Home";
 import Shop from "./componets/shop/Shop";
 import About from "./componets/about/About";
 import ShopDetails from "./componets/shop/ShopDetails";
+import Banner from "./componets/banner/Banner";
 function App() {
   return (
     <Router>
