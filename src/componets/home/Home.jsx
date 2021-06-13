@@ -1,27 +1,28 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Button, Card, CardGroup, Row } from "react-bootstrap";
 import { getupItemsUrl } from "../../utils/url";
+import { Link } from "react-router-dom";
 import Banner from "../banner/Banner";
-import "./Home.css";
+import { Card, CardGroup, Row } from "react-bootstrap";
 
-function Home() {
-  const [sitems, setsitems] = useState([]);
+function ItemDetails() {
+  const [items, setitems] = useState([]);
+
   useEffect(() => {
-    fetchSitems();
+    fetchitems();
   }, []);
-  const fetchSitems = async () => {
+  const fetchitems = async () => {
     const response = await axios.get(getupItemsUrl);
     console.log(response.data.data);
-    // console.log(response.data.data);
-    setsitems(response.data.data);
+    setitems(response.data.data);
   };
+
   return (
-    <div className="Home">
+    <div className="Shop">
       <Banner />
       <CardGroup>
         <Row style={{ margin: "1rem  4rem" }}>
-          {sitems.map((data, index) => {
+          {items.map((items, index) => {
             return (
               <Card
                 className="card"
@@ -30,16 +31,22 @@ function Home() {
                   width: "26rem",
                   margin: "1rem",
                 }}
+                className="items"
+                key={items.itemId}
               >
                 <Card.Img
                   className="cardImage"
                   variant="top"
-                  src={data.item.images.icon}
+                  src={items.item.images.icon}
                 />
+
                 <Card.Body className="cardBody">
-                  <Card.Title>{data.item.name}</Card.Title>
-                  <Card.Text>{data.item.description}</Card.Text>
-                  <button className="btn">Buy Now</button>
+                  <Card.Title>{items.item.name}</Card.Title>
+                  <Card.Text>{items.item.description}</Card.Text>
+                  {/* <h2>{items.item.cost}</h2> */}
+                  <Link to={`/${items.itemId}`}>
+                    <button className="btn">Read More</button>
+                  </Link>
                 </Card.Body>
                 <svg
                   id="wave"
@@ -104,4 +111,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default ItemDetails;

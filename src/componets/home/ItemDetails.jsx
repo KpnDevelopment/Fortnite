@@ -2,8 +2,9 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Carousel, Container } from "react-bootstrap";
+import "../shop/Shop.css";
 
-function ShopDetails(props) {
+function ItemDetails(props) {
   const [video, setvideo] = useState({});
   const [items, setitems] = useState({
     images: {},
@@ -49,7 +50,7 @@ function ShopDetails(props) {
             <img
               style={carosetItem}
               className="d-block w-50 "
-              src={items.images.featured}
+              // src={items.images.featured}
               alt="Loading ....."
             />
             <Container
@@ -134,4 +135,4 @@ function ShopDetails(props) {
   );
 }
 
-export default ShopDetails;
+export default ItemDetails;

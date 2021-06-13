@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardImg, Carousel, CarouselItem } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./Banner.css";
 
 function Banner() {
